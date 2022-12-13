@@ -1,0 +1,24 @@
+#
+# Copyright IBM Corp All Rights Reserved
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+version: '2'
+
+networks:
+  default_network:
+    external: true
+    name: server_network
+
+services:
+  lv_lms_admin:
+    container_name: {CONTAINER_NAME}
+    image: {CONTAINER_IMAGE}:1.0
+    mem_limit: 200m
+    restart: always
+    networks:
+        - default_network
+    ports:
+      - "192.168.0.10:{PORT}:{PORT}"
+    #tty: true
+    #command: /bin/bash

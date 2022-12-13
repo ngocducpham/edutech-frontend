@@ -1,0 +1,870 @@
+.master-layout-client {
+    min-height: 100vh;
+    /* Styles NavSider */
+    
+    .custom-nav.ant-menu-inline {
+        custom-nav-item, .custom-sub-nav >.ant-menu-submenu-title {
+            padding: 0 34px 0 10px !important;
+        }
+        .custom-nav-item {
+            padding: 0 34px 0 10px !important;
+        }
+    }
+    /* End Styles NavSider */
+    /* Styles Header */
+    .app-header {
+        height: $heighAppHeader;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        background: #fff;
+        box-shadow: 4px 4px 40px 0 rgba(0,0,0,.05);
+        width: calc(100vw - 220px);
+        .class-name{
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.85);
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        .icon-collapsed {
+            padding: 0 22px;
+            height: 64px;
+            cursor: pointer;
+            transition: all .3s,padding 0s;
+            font-size: 20px;
+            &:hover {
+                background-color: rgba(0, 0, 0, .025);
+            }
+            .trigger {
+                font-size: 22px;
+            }
+        }
+       
+        .menu-top-right {
+            line-height: 56px;
+            border: none;
+            text-align: right;
+            .ant-menu-submenu-title {
+                min-width: 160px;
+                display: flex;
+                align-items: center;
+                height: 56px;
+                .submenu-title-wrapper {
+                    display: flex;
+                    align-items: center;
+                    .ant-avatar {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    .ant-avatar-icon {
+                        margin-right: 5px;
+                        .anticon-user {
+                            margin-right: 0;
+                            font-size: 18px;
+                        }
+                    }
+                    .anticon-down {
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .ant-menu-submenu-active {
+                // color: #fff !important;
+                background: $navBgActiveColor;
+            }
+        }
+    }
+    /* End Styles Header */
+    .app-breadcrumb {
+        margin: 16px 20px
+    }
+    /* Styles Sider*/
+    .nav-sider {
+        overflow: auto;
+        height: 100vh;
+        position: fixed;
+        left: 0px;
+        z-index: 3;
+        font-size: 16px;
+        &__collapsed {
+            flex: 0 0 $navSiderCollapsedWidth;
+            max-width: $navSiderCollapsedWidth;
+            min-width: $navSiderCollapsedWidth;
+            width: $navSiderCollapsedWidth;
+        }
+        &__expanded {
+            flex: 0 0 $navSiderExpandedWidth !important;
+            max-width: $navSiderExpandedWidth !important;
+            min-width: $navSiderExpandedWidth !important;
+            width: $navSiderExpandedWidth !important;
+        }
+        .frame{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .rollback{
+                background-color: #56616b;
+                color: rgba(255, 255, 255, 0.65);
+                font-size: 16px;
+                padding: 10px;
+                .icon{
+                    margin-right: 10px;
+                }
+            }
+        }
+        .ant-menu-inline-collapsed .ant-menu-submenu-title {
+            padding: 0 31px !important;
+        }
+        .ant-menu-submenu-title {
+            display: flex;
+            align-items: center;
+            .ant-spin-spinning {
+                flex-shrink: 0;
+                width: fit-content;
+                margin-left: auto;
+            }
+            .title {
+                flex: 1;
+                max-width: 89%;
+                overflow: hidden;
+            }
+        }
+        .redirect-login {
+            padding: 2px;
+            margin-right: 4px;
+            transition: all 0.2s;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .redirect-login:hover {
+            background-color: #e6e6e6;
+            color: #000C17;
+        }
+    }
+    .logo {
+        // height: $heighAppHeader;
+        //padding: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background: #002140;
+        &__collapsed {
+            height: 80px;
+            padding: 4px;
+            img {
+                border-radius: 4px;
+                width: 100%;
+            }
+        }
+        &__expanded {
+            padding: 8px;
+            height: $navSiderExpandedWidth;
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+    }
+    /* End Styles Sider*/
+    .app-content {
+        margin-top: $heighAppHeader;
+        .content-wrapper {
+            margin: 8px 8px 8px 8px;
+            .class-list-container {
+                .class-list-page{
+                    display: flex;
+                    gap: 18px;
+                    align-content: flex-start;
+                    .card{
+                        height: fit-content;
+                        width: 260px;
+                        .img{
+                            height: 185px;
+                        }
+                        .frame{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .nameClass{
+                                cursor: pointer;
+                                font-weight: 600;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                            .nameClass:hover{
+                                color: #1890FF;
+                                transition: all 0.3ms;
+                            }
+                        }
+                        
+                        
+                    }
+                    .card:hover{
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    }
+                    
+                }
+            }
+            .chapter-lesson-container{
+                .chapter-lesson-page{
+                    .title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .list{
+                        background-color: #fff;
+                        border-radius: 5px;
+                        .content {
+                            padding: 10px;
+                            font-size: 14px;
+                            .content:hover{
+                                color: #3131b7;
+                            }
+                        }
+                    }
+                    .header {
+                        font-size: 17px;
+                        color: #3131b7;
+                        font-weight: 600;
+                        padding: 10px 0px;
+                    }
+                }
+            }
+            .lesson-container{
+                .lesson-page{
+                    .title{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #FFFFFF;
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                        background-color: #0E90C9;
+                        height: 45px;
+                        border-radius: 5px;
+                    }
+                    .content{
+                        .title-video{
+                            display: flex;
+                            justify-content: start;
+                            padding: 10px 0px;
+                            font-weight: 500;
+                        }
+                        .video{
+                            .ql-video{
+                                width: 100%;
+                                height: 500px;
+                            }
+                        }
+                    }
+                    .assignment{
+                        margin-bottom: 30px;
+                        .title-assignment{
+                            display: flex;
+                            justify-content: start;
+                            font-size: 16px;
+                            padding: 10px 0px;
+                            font-weight: 500;
+                        }
+                        .item-assign{
+                            font-size: 16px;
+                            .name-assign{
+                               padding: 10px 0px;
+                            }
+                            .name-assign:hover{
+                                color: #1890ff;
+                            }
+                            .action{
+                                display: flex;
+                                justify-content: end;
+                                align-items: center;
+                            }
+                        }
+                    }
+                    .document{
+                        display: flex;
+                        flex-direction: column;
+                        .title-document{
+                            display: flex;
+                            justify-content: start;
+                            font-size: 16px;
+                            padding: 10px 0px;
+                            font-weight: 500;
+                        }
+                        .tag{
+                            margin-top: 5px;
+                            width: fit-content;
+                            padding: 10px 20px;
+                            cursor: pointer;
+                        }
+                        .ant-tag {
+                            text-align: center;
+                            color: #1890ff;
+                        }
+                        .tag:hover{
+                            color: green;
+                            transition: all 0.3s;
+                        }
+                    }
+                    .discuss{
+                        margin-top: 15px;
+                        .title-discuss{
+                            display: flex;
+                            justify-content: start;
+                            padding: 10px 0px;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                        .name{
+                            font-size: 16px;
+                        }
+                        .cont{
+                            font-size: 16px;
+                        }
+                        .date{
+                            font-size: 16px;
+                        }
+                        .hv:hover{
+                            cursor: pointer;
+                            color: #ea1717;
+                        }
+                        .frame_btn{
+                            display: flex;
+                            justify-content: end;
+                        }
+                    }
+                    .ant-collapse-header{
+                        padding-left: 0px;
+                    }
+                }
+            }
+            .discuss-container{
+                .discuss-client-page{
+                    border: 1px solid rgba(0, 0, 0, .025);
+                    .topic{
+                        .header{
+                            .maincontent{
+                            font-size: 22px;
+                            font-weight: 600;
+                            }
+                            .title{
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+                        }
+                        .body{
+                            margin-top: 5vh;
+                            padding: 10px;
+                            border: 2px solid rgba(0, 0, 0, 0.1);
+                            .ant-avatar {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .frame_discuss{
+                                display: grid;
+                                grid-template-columns: 5% 95%;
+                                .avatar{
+                                    width: 45px;
+                                    height: 45px;
+                                }
+                                .main{
+                                    margin-left: 15px;
+                                    .title{
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                    }
+                                    .author{
+                                        color: #1890FF;
+                                    }
+                                }
+                            }
+                            .content{
+                                font-size: 16px;
+                                margin: 10px 20px;
+                               p{
+                                margin-top: 0;
+                                margin-bottom: 0;
+                               }
+                            }
+                            .footer{
+                                .reply{
+                                    display: flex;
+                                    justify-content: end;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                    .comment-page{
+                        margin: 10px 0px 0px 30px;
+                        padding: 10px;
+                        .ant-form-item-label{
+                            display: none;
+                        }
+                        .frame_btn{
+                            display: flex;
+                            justify-content: end;
+                        }
+                    }
+                    .comment-page-edit{
+                        padding: 10px;
+                        .frame_btn{
+                            display: flex;
+                            justify-content: end;
+                        }
+                    }
+                    .topic-reply{
+                        .body{
+                            margin-top: 10px;
+                            padding: 10px;
+                            border: 2px solid rgba(0, 0, 0, 0.1);
+                            .ant-avatar {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .frame_discuss{
+                                display: grid;
+                                grid-template-columns: 5% 90% 5%;
+                                .hv:hover{
+                                    cursor: pointer;
+                                    color: #ea1717;
+                                }
+                                .avatar{
+                                    width: 45px;
+                                    height: 45px;
+                                }
+                                .main{
+                                    margin-left: 15px;
+                                    .title{
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                    }
+                                    .author{
+                                        color: #1890FF;
+                                    }
+                                }
+                                .action{
+                                    display: flex;
+                                    justify-content: end;
+                                    align-items: center;
+                                }
+                            }
+                            .content{
+                                margin: 10px 20px;
+                                .ant-form-item-label{
+                                    display: none;
+                                }
+                                .frame_btn{
+                                    display: flex;
+                                    justify-content: end;
+                                }
+                            }
+                            .footer{
+                               display: grid;
+                               grid-template-columns: 10% auto 10%;
+                               .cmt{
+                                    margin-left: 20px;
+                               }
+                               .reply{
+                                    display: flex;
+                                    justify-content: end;
+                                    align-items: center;
+                               }
+                            }
+                            .body-child{
+                                margin-top: 10px;
+                                margin-left: 30px;
+                                padding: 10px;
+                                border: 2px solid rgba(0, 0, 0, 0.05);
+                                .ant-avatar {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                .frame_discuss{
+                                    display: grid;
+                                    grid-template-columns: 5% 90% 5%;
+                                    .hv:hover{
+                                        cursor: pointer;
+                                        color: #ea1717;
+                                    }
+                                    .avatar{
+                                        width: 45px;
+                                        height: 45px;
+                                    }
+                                    .main{
+                                        margin-left: 15px;
+                                        .title{
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            .name{
+                                                font-weight: 400;
+                                                color: #0E90C9;
+                                            }
+                                        }
+                                        .author{
+                                            color: #1890FF;
+                                        }
+                                    }
+                                    .action{
+                                        display: flex;
+                                        justify-content: end;
+                                        align-items: center;
+                                    }
+                                }
+                                .content{
+                                    .ant-form-item-label{
+                                        display: none;
+                                    }
+                                    .frame_btn{
+                                        display: flex;
+                                        justify-content: end;
+                                    }
+                                }
+                                .footer{
+                                    display: flex;
+                                    justify-content: end;
+                                }
+                            }
+                            .readmore{
+                                margin-top: 10px;
+                                margin-left: 30px;
+                            }
+                            .readmore:hover{
+                                cursor: pointer;
+                                color: #1890ff;
+                            }
+                        }
+                        .body:hover{
+                            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        }
+                        
+                    }
+                }
+            }
+            .student-class-list-container{
+                .student-class-client-page{
+                    .title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .table{
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        .ant-table.ant-table-middle {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .discuss-class-container{
+                .discuss-class-page{
+                    .main-title{
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    .topic{
+                        background-color: rgb(255,255,255);
+                        border: 1px solid rgb(216, 220, 240);
+                        border-radius: 8px;
+                        padding: 10px;
+                        margin: 20px 0px;
+                        .lesson{
+                            display: flex;
+                            justify-content: end;
+                            .lesson_name{
+                                
+                                font-size: 14px;
+                                font-weight: 500;
+                              
+                            }
+                            .lesson_name:hover{
+                                color: #3131b7;
+                                cursor: pointer;
+                            }
+                        }
+                      
+                        .frame_discuss{
+                            .title_fr{
+                                margin-bottom: 5px;
+                                .title{
+                                    
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #0E90C9;
+                                }
+                                .title:hover{
+                                    color: #3131b7;
+                                    cursor: pointer;
+                                }
+                            }
+                            
+                            .main{
+                                display: grid;
+                                grid-template-columns: 3% auto;
+                                align-items: center;
+                                .by{
+                                    .author{
+                                        color: rgba(0, 0, 0, 0.65);
+                                    }
+                                }
+                            }
+                            .content{
+                                padding: 20px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+            .assignment-container{
+               
+                .submit-file-page{
+                    height: 84vh;
+                    .title-name{
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .frame{
+                        padding: 10px;
+                        background-color: #e6e6e6;
+                        .title-1{
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding: 10px 5px;
+                        }
+                        .title-2{
+                            padding: 10px 5px;
+                        }
+                    }
+                    .btn-submit{
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
+                .essay-page{
+                    height: 84vh;
+                    .title-name{
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .frame{
+                        padding: 10px;
+                        background-color: #e6e6e6;
+                        .title-1{
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding: 10px 5px;
+                        }
+                        .title-2{
+                            padding: 10px 5px;
+                        }
+                    }
+                    .btn-submit{
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
+                .mutilple-choice-page{
+                    height: 84vh;
+                    .title-name{
+                        font-size: 18px;
+                        font-weight: 600;
+                        
+                    }
+                    .dead-line{
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .frame{
+                        padding: 10px;
+                        .head{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .body{
+                            .items-body{
+                                .ant-table-tbody .ant-table-cell {
+                                    padding: 16px;
+                                    height: 50px;
+                                }
+                            }
+                        }
+                    }
+                    .btn-submit{
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                
+            }
+            .exam-container{
+                .exam-page{
+                    .bodyList{
+                        .item{
+                            display: flex;
+                        }
+                    
+                    }
+                }
+            }
+            .verify-exam-container{
+                .verify-exam-page{
+                    .title-name{
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-bottom: 20px;
+                    }
+                    .time-remain{
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                    .table-verify{
+                        margin-bottom: 20px;
+                        .ant-table-tbody .ant-table-cell {
+                            padding: 16px;
+                            height: 50px;
+                        }
+                    }
+                    .btn-verify{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .assignment-class-container{
+                .assginment-class-page{
+                    .title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .table{
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        .ant-table-tbody .ant-table-cell{
+                            padding: 16px !important;
+                        }
+                    }
+                }
+            }
+
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #e6e6e6;
+        }
+    }
+    .app-footer {
+        padding: 14px 50px;
+        background: #e7e7e7;
+        text-align: center;
+    }
+}
+
+.overlay-panel-submenu {
+    padding: 0;
+    .ant-menu-submenu-title {
+        padding-right: 5px;
+    }
+    li {
+        background: #fff !important;
+        margin: -4px 0 !important;
+    }
+    li, li a {
+        color: $navTextColor !important;
+        &:hover {
+            color: $navTextActiveColor !important;
+        }
+    }
+}
+
+.overlay-panel-submenu.ant-menu-submenu-selected {
+    color: $navTextColor;
+    border: none;
+}
+
+.full-screen-loading {
+    .ant-spin
+    {
+        max-height: unset !important;
+    }
+}
+
+
+
+
+
+
+.client-page-with-aside{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0px 10px;
+}
+
+.none-aside-bar{
+    grid-column: 1/3;
+}
+
+.client-page-height{
+    min-height: 100vh;
+}
+
+.client-container{
+    background-color: white;
+    padding: 20px;
+}
+.table-question{
+    .title-ques{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .time-remain{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .table-ques{
+        display: grid;
+        grid-template-columns: 16% 16% 16% 16% 16% 16%;
+        gap: 3px;
+        margin-bottom: 10px;
+        .item-ques{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 2px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+        }
+    }
+    .btn-ques{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.ant-menu-item{
+    cursor: pointer;
+}

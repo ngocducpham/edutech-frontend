@@ -1,0 +1,36 @@
+.frame-login{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: space-between;
+    .login-container {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        .page-title {
+            text-align: start;
+        }
+        .ant-form-item-control-input-content{
+            flex: auto;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .input{
+            border-radius: 8px;
+        }
+        .login-form-button {
+            width: 100%;
+        }
+        .ant-form-item-explain {
+            font-size: 13px;
+            margin: 4px 0;
+        }
+        .forgetPass{
+            display: block;
+            text-align: end;
+            margin-top: -24px;
+            padding: 4px 0;
+            color: #202227;
+        }
+    }
+}
